@@ -1,7 +1,7 @@
 <template>
 	<div class='days'>
 		<div v-for='day in daysInMonth' :key='day' class='day' :class='{ today: isToday(day), selected: isSelected(day) }'
-		     @click='handleDateClick(day)'>
+		    @click='handleDateClick(day)'>
 			{{ day}}
 			<div v-if='findId(day)!==-1'>{{addInfo[findId(day)].data.name}}, {{addInfo[findId(day)].data.message}}</div>
 		</div>
